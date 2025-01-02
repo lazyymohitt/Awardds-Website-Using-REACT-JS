@@ -131,7 +131,7 @@ const Hero = () => {
             G<b>a</b>ming
           </h1>
           <div className="absolute left-0 top-0 z-40 size-full ">
-              <div className=" px-5 mt-[24] sm:px-10">
+              <div className=" px-5 mt-24 sm:px-10">
                 <h1 className="headings hero-heading text-[#DFDFF2] ">redifi<b>n</b>e</h1>
                 <p className="mb-5 max-w-64 text-xs font-[gilroy] text-white">Enter the Metagame Layer <br /> Unleash the Play Economy </p>
                 <Button id="watch-trailer" title="Watch Trailer" leftIcon={<TiLocationArrow/>} containerClass="!bg-yellow-300 flex-center gap-1" />
