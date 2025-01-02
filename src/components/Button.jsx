@@ -1,17 +1,28 @@
-import React from 'react'
+import clsx from "clsx";
 
-const Button = ({id, title, leftIcon ,containerClass , rightIcon}) => {
+const Button = ({ id, title, rightIcon, leftIcon, containerClass }) => {
   return (
-    <button className=' flex justify-center bg-yellow-300 hover:bg-white transition-all ease-linear duration-200 items-center gap-1  rounded-full px-3 py-1'>
+    <button
+      id={id}
+      className={clsx(
+        "group relative z-10 w-fit cursor-pointer overflow-hidden rounded-full bg-violet-50 px-5 py-1 text-black",
+        containerClass
+      )}
+    >
       {leftIcon}
-      <span className='text-xs font-[Gilroy]'>
-        <div>
+
+      <span className="relative inline-flex overflow-hidden font-general text-xs uppercase">
+        <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:translate-y-[-160%] group-hover:skew-y-12">
           {title}
         </div>
-        {rightIcon}
+        <div className="absolute translate-y-[164%] skew-y-12 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
+          {title}
+        </div>
       </span>
-    </button>
-  )
-}
 
-export default Button
+      {rightIcon}
+    </button>
+  );
+};
+
+export default Button;
